@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/compras-styles.css">
+    <title>Compras</title>
+</head>
+
+<body>
+    <header>
+        <h1>Módulo de Compras</h1>
+        <nav>
+            <ul>
+                <li><a href="/perfil">Perfil</a></li>
+                <li><a href="/parametrizacion">Parametrización</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/clientes">Clientes</a></li>
+                <li><a href="/cotizacion">Cotización</a></li>
+                <li><a href="/compras">Compras</a></li>
+                <li><a href="/stock">Stock</a></li>
+                <li><a href="/informes">Informes</a></li>
+                <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="compras-section">
+            <h2>Gestión de Compras</h2>
+            <!-- Formulario para realizar una compra -->
+            <form id="compras-form">
+                <div class="form-group">
+                    <label for="cotizacion-id">Número de Cotización:</label>
+                    <input type="text" id="cotizacion-id" name="cotizacion-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="cliente-id">ID del Cliente:</label>
+                    <input type="text" id="cliente-id" name="cliente-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha-compra">Fecha de Compra:</label>
+                    <input type="date" id="fecha-compra" name="fecha-compra" required>
+                </div>
+                <button type="submit">Realizar Compra</button>
+            </form>
+
+            <!-- Lista de compras recientes -->
+            <section class="lista-compras">
+                <h3>Compras Recientes</h3>
+                <ul id="compras-list">
+                    <!-- Aquí se mostrarán las compras -->
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <script src="static/js/compras-scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

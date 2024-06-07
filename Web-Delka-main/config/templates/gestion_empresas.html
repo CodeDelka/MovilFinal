@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Empresas - Administrador</title>
+    <link rel="stylesheet" href="static/css/gestion_empresas-styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Empresas - Administrador</h1>
+        <nav>
+            <ul>
+                <li><a href="/menu_principal">Menú principal</a></li>
+                <li><a href="/admin-empresa">Gestion de empresas
+                <li><a href="/gestion_empresas">Gestión de Empresas</a></li>
+                <li><a href="/periodo-managment">Gestión de Periodos</a></li>
+                <li><a href="/databasemanagment">Gestión de Bases de Datos</a></li>
+                <li><a href="/cerrar_sesion">Cerrar Sesión</a></li>
+                <li><button id="cerrar-sesion-btn">Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="gestion-empresas-section">
+            <h2>Empresas</h2>
+            <!-- Contenido de la gestión de empresas -->
+            <div class="empresa">
+                <h3>Empresa A</h3>
+                <p>Módulos:</p>
+                <ul>
+                    <li>Ventas <input type="checkbox" checked></li>
+                    <li>Inventario <input type="checkbox" checked></li>
+                    <li>Contabilidad <input type="checkbox" checked></li>
+                    <!-- Agrega más módulos aquí -->
+                </ul>
+            </div>
+            <div class="empresa">
+                <h3>Empresa B</h3>
+                <p>Módulos:</p>
+                <ul>
+                    <li>Ventas <input type="checkbox"></li>
+                    <li>Inventario <input type="checkbox"></li>
+                    <li>Contabilidad <input type="checkbox" checked></li>
+                    <!-- Agrega más módulos aquí -->
+                </ul>
+            </div>
+            <!-- Agrega más empresas aquí -->
+        </section>
+    </main>
+    <script src="static/js/gestion_empresas-scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametrización - Portal de Empresa</title>
+    <link rel="stylesheet" href="static/css/parametrizacion-styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Parametrización</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/perfil">Perfil</a></li>
+            <li><a href="/parametrizacion">Parametrización</a></li>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/clientes">Clientes</a></li>
+            <li><a href="/cotizacion">Cotización</a></li>
+            <li><a href="/compras">Compras</a></li>
+            <li><a href="/stock">Stock</a></li>
+            <li><a href="/informes">Informes</a></li>
+            <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Configuración de Parámetros</h2>
+            <form id="parametros-form">
+                <div>
+                    <label for="ganancia">Porcentaje de Ganancia:</label>
+                    <input type="number" id="ganancia" name="ganancia" min="0" max="100">
+                </div>
+                <div>
+                    <label for="iva">Porcentaje de IVA:</label>
+                    <input type="number" id="iva" name="iva" min="0" max="100">
+                </div>
+                <!-- Otros campos de configuración de parámetros -->
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+    </main>
+    <script src="parametrizacion-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

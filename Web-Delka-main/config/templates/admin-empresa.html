@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Empresas - Portal de Empresa</title>
+    <link rel="stylesheet" href="static/css/admin_empresa_styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Administrar Empresas</h1>
+        <nav>
+            <ul>
+                <li><a href="/menu_principal">Menú principal</a></li>
+                <li><a href="/admin-empresa">Gestion de empresas</a></li>
+                <li><a href="/gestion_empresas">Gestión de Empresas</a></li>
+                <li><a href="/periodo-managment">Gestión de Periodos</a></li>
+                <li><a href="/databasemanagment">Gestión de Bases de Datos</a></li>
+                <li><a href="/">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="empresa-section">
+            <h2>Agregar Nueva Empresa</h2>
+            <form id="agregar-empresa-form">
+                <div class="form-group">
+                    <label for="empresa-nombre">Nombre de la Empresa:</label>
+                    <input type="text" id="empresa-nombre" name="empresa-nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="Descripcion">Descripcion:</label>
+                    <input type="text" id="Descripcion" name="Descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="Periodo Activo">Periodo Activo:</label>
+                    <input type="text" id="Periodo Activo" name="Periodo Activo" required>
+                </div>
+                <div class="form-group">
+                    <label for="Usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="Usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="Contraseña">Contraseña:</label>
+                    <input type="text" id="Contraseña" name="Contraseña" required>
+                </div>
+                <button type="submit">Agregar Empresa</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="static/js/admin_empresa.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

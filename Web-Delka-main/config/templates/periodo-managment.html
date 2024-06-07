@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionar Periodos</title>
+  <link rel="stylesheet" href="static/css/period-management-styles.css">
+</head>
+<body>
+  <header>
+    <h1>Gestionar Periodos - Administrador</h1>
+    <nav>
+      <ul>
+          <li><a href="/menu_principal">Menú principal</a></li>
+          <li><a href="/admin-empresa">Gestion de empresas
+          <li><a href="/gestion_empresas">Gestión de Empresas</a></li>
+          <li><a href="/periodo-managment">Gestión de Periodos</a></li>
+          <li><a href="/databasemanagment">Gestión de Bases de Datos</a></li>
+          <li><a href="/cerrar_sesion">Cerrar Sesión</a></li>
+      </ul>
+  </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Periodo de Actividad</h2>
+      <form id="period-form">
+        <div class="period">
+          <label for="company-name">Nombre de la Empresa:</label>
+          <select id="company-name" name="company-name" required>
+            <option value="">Seleccione una empresa</option>
+          </select>
+        </div>
+        <div class="period">
+          <label for="period-duration">Duración del Periodo (meses):</label>
+          <input type="number" id="period-duration" name="period-duration" min="1" required>
+        </div>
+        <button type="submit">Guardar Cambios</button>
+      </form>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="static/js/period-managment-script.js"></script>
+  
+
+</body>
+</html>

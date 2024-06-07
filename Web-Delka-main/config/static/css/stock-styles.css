@@ -1,0 +1,96 @@
+/* Estilos para la página de Stock */
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #3c506b;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.stock-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    text-align: left;
+}
+
+.stock-section h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.stock-list {
+    list-style: none;
+}
+
+.stock-item {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stock-optimo {
+    background-color: #2ecc71; /* Verde para óptimo */
+    color: white;
+}
+
+.stock-minimo {
+    background-color: #f1c40f; /* Amarillo para stock mínimo */
+    color: black;
+}
+
+.stock-sin-existencia {
+    background-color: #e74c3c; /* Rojo para sin existencia */
+    color: white;
+}

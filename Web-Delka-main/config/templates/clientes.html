@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/clientes-styles.css">
+    <title>Clientes</title>
+</head>
+
+<body>
+    <header>
+        <h1>Módulo de Clientes</h1>
+        <nav>
+            <ul>
+                <li><a href="/perfil">Perfil</a></li>
+                <li><a href="/parametrizacion">Parametrización</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/clientes">Clientes</a></li>
+                <li><a href="/cotizacion">Cotización</a></li>
+                <li><a href="/compras">Compras</a></li>
+                <li><a href="/stock">Stock</a></li>
+                <li><a href="/informes">Informes</a></li>
+                <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="clientes-section">
+            <h2>Gestión de Clientes</h2>
+            <!-- Formulario para agregar o modificar clientes -->
+            <form id="cliente-form">
+                <div class="form-group">
+                    <label for="nit">NIT/Identificación:</label>
+                    <input type="text" id="nit" name="nit" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre/Razón Social:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <button type="submit">Agregar/Modificar Cliente</button>
+            </form>
+
+            <!-- Sección para visualizar las compras realizadas por el cliente -->
+            <section class="compras-section">
+                <h2>Compras Realizadas por Mes</h2>
+                <div id="compras-por-mes-chart"></div>
+                <!-- Aquí se puede integrar un gráfico para mostrar las compras realizadas por mes -->
+            </section>
+        </section>
+    </main>
+
+    <script src="static/js/clientes-scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

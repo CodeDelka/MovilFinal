@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal del Administrador</title>
+  <link rel="stylesheet" href="static/css/dashboard-styles.css">
+</head>
+<body>
+  <header>
+    <h1>Portal del Administrador</h1>
+    <nav>
+      <ul>
+        <li><a href="#create-company">Crear Empresa</a></li>
+        <li><a href="#manage-modules">Gestionar Módulos</a></li>
+        <li><a href="#manage-periods">Gestionar Periodos</a></li>
+        <li><a href="#manage-databases">Gestionar Bases de Datos</a></li>
+        <li><button id="logout-btn">Cerrar sesión</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="create-company">
+      <h2>Crear Empresa</h2>
+      <form id="create-company-form">
+        <div class="form-group">
+          <label for="company-name">Nombre de la Empresa:</label>
+          <input type="text" id="company-name" name="company-name" required>
+        </div>
+        <div class="form-group">
+          <label for="modules">Módulos Disponibles:</label>
+          <select id="modules" name="modules" multiple required>
+            <option value="sales">Ventas</option>
+            <option value="inventory">Inventario</option>
+            <option value="finance">Finanzas</option>
+            <!-- Otros módulos disponibles -->
+          </select>
+        </div>
+        <button type="submit">Crear</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Portal del Administrador</p>
+  </footer>
+  
+  <script src="static/js/dashboard-scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

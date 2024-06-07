@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionar Módulos</title>
+  <link rel="stylesheet" href="static/css/module-management-styles.css">
+</head>
+<body>
+  <header>
+    <h1>Gestionar Módulos</h1>
+      <nav>
+        <ul>
+            <li><a href="/menu_principal">Menú principal</a></li>
+            <li><a href="/gestion_empresas">Gestión de Empresas</a></li>
+            <li><a href="/gestion_periodos">Gestión de Periodos</a></li>
+            <li><a href="/databasemanagment">Gestión de Bases de Datos</a></li>
+            <li><a href="/modulos">Gestión de módulos</a></li>
+            <li><a href="/">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Módulos Disponibles</h2>
+      <form id="module-form">
+        <div class="module">
+          <input type="checkbox" id="sales" name="module" value="sales">
+          <label for="sales">Ventas</label>
+        </div>
+        <div class="module">
+          <input type="checkbox" id="inventory" name="module" value="inventory">
+          <label for="inventory">Inventario</label>
+        </div>
+        <div class="module">
+          <input type="checkbox" id="finance" name="module" value="finance">
+          <label for="finance">Finanzas</label>
+        </div>
+        <!-- Otros módulos disponibles -->
+        <button type="submit">Guardar Cambios</button>
+      </form>
+    </section>
+  </main>
+  <script src="module-management-script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

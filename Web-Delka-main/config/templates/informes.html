@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/informes-styles.css">
+    <title>Informes</title>
+</head>
+
+<body>
+    <header>
+        <h1>Módulo de Informes</h1>
+        <nav>
+            <ul>
+                <li><a href="/perfil">Perfil</a></li>
+                <li><a href="/parametrizacion">Parametrización</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/clientes">Clientes</a></li>
+                <li><a href="/cotizacion">Cotización</a></li>
+                <li><a href="/compras">Compras</a></li>
+                <li><a href="/stock">Stock</a></li>
+                <li><a href="/informes">Informes</a></li>
+                <li><button id="cerrar-sesion-btn">Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="informes-section">
+            <h2>Generación de Informes</h2>
+
+            <!-- Opciones para generar informes -->
+            <div class="informes-opciones">
+                <button id="ventas-btn">Informe de Ventas</button>
+                <button id="facturas-btn">Generar Factura</button>
+                <button id="clientes-btn">Informe de Clientes</button>
+            </div>
+
+            <!-- Área para mostrar informes generados -->
+            <div class="informes-resultado">
+                <h3>Resultado del Informe</h3>
+                <div id="resultado-informe">
+                    <!-- Los informes generados se mostrarán aquí -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="static/js/informes-scripts.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionar Bases de Datos</title>
+  <link rel="stylesheet" href="static/css/database-management-styles.css">
+</head>
+<body>
+  <header>
+    <h1>Gestionar Bases de Datos</h1>
+    <nav>
+      <ul>
+        <li><a href="/menu_principal">Menú principal</a></li>
+        <li><a href="/admin-empresa">Gestion de empresas
+        <li><a href="/gestion_empresas">Gestión de Empresas</a></li>
+        <li><a href="/periodo-managment">Gestión de Periodos</a></li>
+        <li><a href="/databasemanagment">Gestión de Bases de Datos</a></li>
+        <li><button id="logout-btn">Cerrar sesión</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Crear Base de Datos</h2>
+      <form id="bdtest">
+        <div class="bdtest">
+          <label for="id">Nombre de la Empresa:</label>
+          <select id="id" name="nombre_empresa" required>
+            <option value="">Seleccione una empresa</option>
+          </select>
+        </div>
+        <div class="bdtest">
+          <label for="bdtest">Nombre de la Base de Datos:</label>
+          <input type="text" id="bdtest" name="bdtest" required>
+        </div>
+        <button type="submit">Crear Base de Datos</button>
+      </form>
+    </section>
+    
+    <section>
+      <h2>Gestionar Bases de Datos Existentes</h2>
+      <ul id="bdtest-list" class="bdtest-list">
+        <!-- Las bases de datos se añadirán dinámicamente aquí -->
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Gestionar Bases de Datos</p>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="static/js/database-management-scripts.js"></script>
+</body>
+</html>

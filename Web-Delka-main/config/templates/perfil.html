@@ -1,0 +1,52 @@
+<!-- perfil.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - Portal de Empresa</title>
+  <link rel="stylesheet" href="static/css/perfil-styles.css">
+</head>
+<body>
+  <header>
+    <h1>Perfil</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/perfil">Perfil</a></li>
+      <li><a href="/parametrizacion">Parametrización</a></li>
+      <li><a href="/productos">Productos</a></li>
+      <li><a href="/clientes">Clientes</a></li>
+      <li><a href="/cotizacion">Cotización</a></li>
+      <li><a href="/compras">Compras</a></li>
+      <li><a href="/stock">Stock</a></li>
+      <li><a href="/informes">Informes</a></li>
+      <li><button id="cerrarSesionBtn">Cerrar sesión</button></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Detalles del Perfil</h2>
+      <div>
+        <label for="empresa">Nombre de la Empresa:</label>
+        <input type="text" id="empresa" name="empresa" readonly>
+      </div>
+      <div>
+        <label for="nit">NIT:</label>
+        <input type="text" id="nit" name="nit" readonly>
+      </div>
+      <div>
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" readonly>
+      </div>
+      <div>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" readonly>
+      </div>
+      <!-- Otros campos del perfil -->
+    </section>
+  </main>
+  <script src="perfil-script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
