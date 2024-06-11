@@ -1,6 +1,6 @@
-/* Estilos para la página de Clientes */
+/* perfil-styles.css */
 
-/* Reset de estilos */
+/* Reset de estilos básicos */
 * {
     margin: 0;
     padding: 0;
@@ -8,111 +8,103 @@
 }
 
 body {
-    font-family: 'Helvetica', sans-serif;
-    background-color: #f3f4f6;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
     background-color: #007bff;
-    color: white;
-    padding: 15px 20px;
+    padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    font-size: 28px;
+header h1 {
+    margin-bottom: 0.5rem;
+    color: white; /* Cambio a texto blanco */
+    background-color: #007bff; /* Fondo azul */
+    display: inline-block; /* Asegura que el fondo azul solo abarque el texto */
+    padding: 0.5rem 1rem; /* Ajuste de espaciado */
+    border-radius: 4px; /* Bordes redondeados */
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 1rem;
 }
 
-nav ul li a {
-    color: 007bff;
+nav ul li a,
+nav ul li button {
+    color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    background-color: #007bff; /* Fondo azul */
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem; /* Ajuste de espaciado */
+    border-radius: 4px; /* Bordes redondeados */
 }
 
-nav ul li a:hover {
-    background-color: #3c506b;
+nav ul li a:hover,
+nav ul li button:hover {
+    text-decoration: underline;
+    background-color: #0056b3; /* Tono más oscuro del azul */
 }
 
 main {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+    padding: 2rem;
 }
 
-.clientes-section {
+section {
     background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 60%;
-    text-align: left;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.clientes-section h2 {
-    color: #34495e;
-    margin-bottom: 20px;
+section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #007bff;
 }
 
-.form-group {
-    margin-bottom: 15px;
+section div {
+    margin-bottom: 1rem;
 }
 
-label {
-    display: block;
+section div label {
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #34495e;
+    margin-bottom: 0.5rem;
 }
 
-input[type="text"],
-input[type="email"] {
+section div input {
     width: 100%;
-    padding: 10px;
+    padding: 0.5rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus {
-    outline: none;
-    border-color: #3498db;
-}
-
-button {
-    background-color: #3498db;
+#cerrarSesionBtn {
     color: white;
-    padding: 10px 15px;
+    background-color: #007bff;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 0.5rem 1rem; /* Ajuste de espaciado */
 }
 
-button:hover {
-    background-color: #2980b9;
-}
-
-.cliente-info {
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.cliente-info p {
-    margin: 5px 0;
+#cerrarSesionBtn:hover {
+    background-color: #0056b3;
 }
