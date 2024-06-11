@@ -1,15 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     const empresasSection = document.getElementById('empresas-section');
 
-    // Datos simulados de empresas
-    const empresas = [
-        { nombre: 'Empresa A', modulos: ['Ventas', 'Inventario', 'Contabilidad'] },
-        { nombre: 'Empresa B', modulos: ['Contabilidad'] }
-        // Agrega más empresas aquí si es necesario
-    ];
+    function obtenerYMostrarEmpresas() {
+        axios.get('/api/getEmpresas')
+            .then(response => {
+                const dataEmpresas = response.data;
+                mostrarEmpresas(dataEmpresas);
+            })
+            .catch(error => {
+                console.error('Error al obtener las empresas:', error);
+                alert('Hubo un error al obtener las empresas.');
+            });
+    }
 
-    // Función para generar el HTML de las empresas
-    function generarHTMLDeEmpresas() {
+    function mostrarEmpresas(empresas) {
         empresasSection.innerHTML = ''; // Limpiar el contenido existente
 
         empresas.forEach(empresa => {
@@ -17,28 +21,23 @@ document.addEventListener('DOMContentLoaded', function() {
             empresaDiv.classList.add('empresa');
 
             const nombreEmpresa = document.createElement('h3');
-            nombreEmpresa.textContent = empresa.nombre;
+            nombreEmpresa.textContent = empresa.nombre; // Ajustado según la estructura de datos recibida
             empresaDiv.appendChild(nombreEmpresa);
 
-            const listaModulos = document.createElement('ul');
-            empresa.modulos.forEach(modulo => {
-                const moduloLi = document.createElement('li');
-                moduloLi.textContent = modulo;
-                listaModulos.appendChild(moduloLi);
-            });
-            empresaDiv.appendChild(listaModulos);
+            const modulosEmpresa = document.createElement('p');
+            modulosEmpresa.textContent = `Módulos: ${empresa.modulos.join(', ')}`; // Ajustado según la estructura de datos recibida
+            empresaDiv.appendChild(modulosEmpresa);
 
             empresasSection.appendChild(empresaDiv);
         });
     }
 
-    // Llama a la función para generar el HTML de las empresas
-    generarHTMLDeEmpresas();
-
     // Manejo del evento click para cerrar sesión
     document.getElementById('cerrar-sesion-btn').addEventListener('click', function() {
         cerrarSesion();
     });
+
+    obtenerYMostrarEmpresas();
 
     function cerrarSesion() {
         alert('Sesión cerrada. Redirigiendo al menú principal...');
