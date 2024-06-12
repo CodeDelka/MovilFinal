@@ -1,147 +1,113 @@
+/* database-management-styles.css */
+
+/* Restablecer estilos */
+body, ul, li, h1, h2, h3, p, form, label, button, table, thead, tbody, th, tr, td {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-  
-  header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    color: #333;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-  }
-  
-  .database {
-    margin-bottom: 20px;
-  }
-  
-  .database label {
-    display: block;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .database input[type="text"] {
-    padding: 8px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  .database input[type="text"]:focus {
-    outline: none;
-    border-color: #007bff;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .database-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .database-list li {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
-  
-  .database-list li span {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .database-list li button {
-    background-color: #d9534f;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .database-list li button:hover {
-    background-color: #c9302c;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #111;
+  color: white;
 }
 
 header {
-    background-color: #3498db;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  background: #333;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #f2f2f2;
-    overflow: hidden;
-    border-bottom: 1px solid #ccc;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
 }
 
 nav ul li {
-    float: left;
+  display: inline;
+  margin-right: 20px;
 }
 
 nav ul li a {
-    display: block;
-    color: #333;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #ddd;
+  text-decoration: none;
+  color: white;
 }
 
 main {
-    padding: 20px;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+select {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 250px;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, .2);
+  color: white;
+  outline: none;
+}
+
+button[type="submit"] {
+  border: 1px solid rgba(10, 180, 180, 1);
+  background: rgba(20, 20, 20, .6);
+  font-size: 18px;
+  color: white;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+button[type="submit"]:hover {
+  background: rgba(20, 20, 20, .8);
+  padding: 10px 80px;
+}
+
+/* Estilos de tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #333;
+  color: white;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+th {
+  text-align: left;
 }

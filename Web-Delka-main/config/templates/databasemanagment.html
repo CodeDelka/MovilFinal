@@ -12,36 +12,32 @@
     <nav>
       <ul>
         <li><a href="/menu_principal">Menú principal</a></li>
+        <li><a href="/admin-empresa">Crear Empresa</a></li>
         <li><a href="/gestion_empresas">Gestión de Empresas</a></li>
         <li><a href="/periodo-managment">Gestión de Periodos</a></li>
         <li><a href="/databasemanagment">Gestión de Bases de Datos</a></li>
-        <li><button id="logout-btn">Cerrar sesión</button></li>
+        <li><a href="/modulos">Gestión de módulos</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section>
-      <h2>Crear Base de Datos</h2>
-      <form id="bdtest">
-        <div class="bdtest">
-          <label for="id">Nombre de la Empresa:</label>
-          <select id="id" name="nombre_empresa" required>
-            <option value="">Seleccione una empresa</option>
-          </select>
-        </div>
-        <div class="bdtest">
-          <label for="bdtest">Nombre de la Base de Datos:</label>
-          <input type="text" id="bdtest" name="bdtest" required>
-        </div>
-        <button type="submit">Crear Base de Datos</button>
-      </form>
-    </section>
-    
-    <section>
-      <h2>Gestionar Bases de Datos Existentes</h2>
-      <ul id="bdtest-list" class="bdtest-list">
-        <!-- Las bases de datos se añadirán dinámicamente aquí -->
-      </ul>
+      <h2>Empresas</h2>
+      <table id="empresa-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre de la Empresa</th>
+            <th>Descripción de la Empresa</th>
+            <th>Periodo Activo</th>
+            <th>Usuario</th>
+            <th>Contraseña</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Las filas de la tabla se insertarán aquí dinámicamente -->
+        </tbody>
+      </table>
     </section>
   </main>
   <footer>

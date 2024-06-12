@@ -13,15 +13,12 @@
         <h1>Administrar Empresas</h1>
         <nav>
             <ul>
-                <li><a href="/perfil">Perfil</a></li>
-                <li><a href="/parametrizacion">Parametrización</a></li>
-                <li><a href="/productos">Productos</a></li>
-                <li><a href="/clientes">Clientes</a></li>
-                <li><a href="/cotizacion">Cotización</a></li>
-                <li><a href="/compras">Compras</a></li>
-                <li><a href="/stock">Stock</a></li>
-                <li><a href="/informes">Informes</a></li>
-                <li><a href="/admin-empresa">Administrar empresas</a></li>
+                <li><a href="/menu_principal">Menú principal</a></li>
+                <li><a href="/admin-empresa">Crear Empresa</a></li>
+                <li><a href="/gestion_empresas">Gestión de Empresas</a></li>
+                <li><a href="/periodo-managment">Gestión de Periodos</a></li>
+                <li><a href="/databasemanagment">Gestión de Bases de Datos</a></li>
+                <li><a href="/modulos">Gestión de módulos</a></li>
                 <li><a href="/">Cerrar Sesión</a></li>
             </ul>
         </nav>
@@ -29,30 +26,48 @@
 
     <main>
         <section class="empresa-section">
-            <h2>Agregar Nueva Empresa</h2>
-            <form id="agregar-empresa-form">
-                <div class="form-group">
-                    <label for="empresa-nombre">Nombre de la Empresa:</label>
-                    <input type="text" id="empresa-nombre" name="empresa-nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="Descripcion">Descripcion:</label>
-                    <input type="text" id="Descripcion" name="Descripcion" required>
-                </div>
-                <div class="form-group">
-                    <label for="Periodo Activo">Periodo Activo:</label>
-                    <input type="text" id="Periodo Activo" name="Periodo Activo" required>
-                </div>
-                <div class="form-group">
-                    <label for="Usuario">Usuario:</label>
-                    <input type="text" id="usuario" name="Usuario" required>
-                </div>
-                <div class="form-group">
-                    <label for="Contraseña">Contraseña:</label>
-                    <input type="text" id="Contraseña" name="Contraseña" required>
-                </div>
-                <button type="submit">Agregar Empresa</button>
-            </form>
+            <div class="signupForm">
+                <h2>Agregar Nueva Empresa</h2>
+                <form id="agregar-empresa-form">
+                    <div class="form-group">
+                        <label for="empresa-nombre">Nombre de la Empresa:</label>
+                        <input type="text" id="empresa-nombre" name="empresa-nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Descripcion">Descripcion:</label>
+                        <input type="text" id="Descripcion" name="Descripcion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Periodo Activo">Periodo Activo:</label>
+                        <input type="text" id="Periodo Activo" name="Periodo Activo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Usuario">Usuario:</label>
+                        <input type="text" id="usuario" name="Usuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Contraseña">Contraseña:</label>
+                        <input type="password" id="Contraseña" name="Contraseña" required>
+                    </div>
+                    <button type="submit">Agregar Empresa</button>
+                </form>
+            </div>
+            <div class="table-container">
+                <table id="empresas-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Periodo Activo</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Empresas serán agregadas aquí -->
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
 

@@ -14,33 +14,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function mostrarEmpresas(empresas) {
-        empresasSection.innerHTML = ''; // Limpiar el contenido existente
+        empresasSection.innerHTML = '<h2>Empresas</h2>'; // Limpiar el contenido existente y añadir el título
 
         empresas.forEach(empresa => {
             const empresaDiv = document.createElement('div');
             empresaDiv.classList.add('empresa');
 
             const nombreEmpresa = document.createElement('h3');
-            nombreEmpresa.textContent = empresa.nombre; // Ajustado según la estructura de datos recibida
+            nombreEmpresa.textContent = empresa.nombre_empresa; // Ajustado según la estructura de datos recibida
             empresaDiv.appendChild(nombreEmpresa);
 
             const modulosEmpresa = document.createElement('p');
-            modulosEmpresa.textContent = `Módulos: ${empresa.modulos.join(', ')}`; // Ajustado según la estructura de datos recibida
+            modulosEmpresa.textContent = `Módulos: ${empresa.modulos ? empresa.modulos.join(', ') : 'N/A'}`; // Ajustado según la estructura de datos recibida
             empresaDiv.appendChild(modulosEmpresa);
 
             empresasSection.appendChild(empresaDiv);
         });
     }
 
-    // Manejo del evento click para cerrar sesión
-    document.getElementById('cerrar-sesion-btn').addEventListener('click', function() {
-        cerrarSesion();
-    });
-
+    // Llamar a la función para obtener y mostrar las empresas al cargar la página
     obtenerYMostrarEmpresas();
-
-    function cerrarSesion() {
-        alert('Sesión cerrada. Redirigiendo al menú principal...');
-        window.location.href = '/';
-    }
 });

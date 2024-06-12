@@ -69,3 +69,4 @@ def stock():
 @ruta_render.route("/admin-empresa", methods=['GET'])
 def adminEmpresa():
     return render_template('admin-empresa.html')
+
