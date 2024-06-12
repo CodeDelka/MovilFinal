@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Stock - Portal de Empresa</title>
-    <link rel="stylesheet" href="static/css/stock-styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stock-styles.css') }}">
 </head>
 
 <body>
@@ -31,29 +31,14 @@
             <h2>Productos en Stock</h2>
 
             <ul id="lista-stock">
-                <!-- Ejemplo de producto en estado óptimo -->
-                <li class="stock-item stock-optimo">
-                    <span>MANGO - Código: 1234</span>
-                    <span>Cantidad: 100</span>
-                </li>
-
-                <!-- Ejemplo de producto en estado de stock mínimo -->
-                <li class="stock-item stock-minimo">
-                    <span>CIRUELA - Código: 5678</span>
-                    <span>Cantidad: 50</span>
-                </li>
-
-                <!-- Ejemplo de producto sin existencia -->
-                <li class="stock-item stock-sin-existencia">
-                    <span>MAMÓN - Código: 9101</span>
-                    <span>Cantidad: 0</span>
-                </li>
+               
             </ul>
         </section>
     </main>
 
-    <script src="cerrar_sesion.js"></script>
+    <script src="{{ url_for('static', filename='js/cerrar_sesion.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='js/stock.js') }}"></script>
 </body>
 
 </html>

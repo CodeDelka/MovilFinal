@@ -37,6 +37,7 @@ def eliminarProducto():
 
 @ruta_productos.route("/productos", methods=['GET'])
 def obtenerProductos():
+    print("Entro")
     productos = Producto.query.all()
     result = productos_schema.dump(productos)
     return jsonify(result)
