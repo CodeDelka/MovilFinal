@@ -10,6 +10,7 @@ productos_schema = ProductoSchema(many=True)
 
 @ruta_productos.route("/guardarProducto",  methods=['POST'])
 def saveProducto():
+    print("entro")
     nombre=request.json['nombre']
     descripcion=request.json['descripcion']
     precio_unitario=request.json['precio_unitario']
@@ -31,3 +32,11 @@ def eliminarProducto():
       bd.session.delete(producto)
       bd.session.commit()
       return jsonify({"message": "Producto parametrización eliminado"}), 200
+
+
+
+@ruta_productos.route("/productos", methods=['GET'])
+def obtenerProductos():
+    productos = Producto.query.all()
+    result = productos_schema.dump(productos)
+    return jsonify(result)
