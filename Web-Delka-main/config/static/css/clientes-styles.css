@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
 * {
   font-family: 'Open Sans', sans-serif;
 }
@@ -66,7 +67,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 800px;
-  height: 600px;
+  height: 800px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -123,21 +124,57 @@ main {
   padding: 10px 80px;
 }
 
-.compras-section {
+/* Estilos para la tabla de clientes */
+#clientes-table {
   width: 100%;
   max-width: 800px;
   margin-top: 20px;
-}
-
-.compras-section h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-#compras-por-mes-chart {
-  background: rgba(20, 40, 40, .8);
-  padding: 20px;
-  border-radius: 10px;
+  border-collapse: collapse;
+  background: rgba(20, 20, 20, .8);
+  color: white;
   box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
+}
+
+#clientes-table th,
+#clientes-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#clientes-table th {
+  background-color: transparent;
+  color: white;
+}
+
+#clientes-table tr:nth-child(even) {
+  background-color: rgba(20, 20, 20, .6);
+}
+
+#clientes-table tr:hover {
+  background-color: rgba(20, 20, 20, .4);
+}
+
+.clientes-section table {
+  width: 100%;
+}
+
+.clientes-section th, 
+.clientes-section td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.clientes-section th {
+  background-color: #333;
+  color: white;
+}
+
+.clientes-section tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.clientes-section tr:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
